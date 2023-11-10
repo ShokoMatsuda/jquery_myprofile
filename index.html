@@ -9,6 +9,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+
+    <!-- slickの読み込み -->
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
     <title>MyProfile</title>
 </head>
 <body>
@@ -25,9 +31,20 @@
         </nav>
     </header>
     <main>
-        <div>
-            <img id="main_img" src="img/main.png" alt="カメラの写真">
+        <!-- カルーセル -->
+        <section id="carousel-section">
+        <div class="carousel">
+            <div>
+                <img id="main_img" class="carouselImg" src="img/main.png" alt="愛機のCanon">
+            </div>
+            <div>
+                <img id="main_img" class="carouselImg" src="img/main2.png" alt="撮影機材の写真">
+            </div>
+            <div>
+                <img id="main_img" class="carouselImg" src="img/main3.png" alt="夕日とcanonの写真">
+            </div>
         </div>
+        </section>
         <!-- About -->
         <h1>About</h1>
         <section id="about">
@@ -65,6 +82,8 @@
         <p class="text">&copy; MyProfile. All rights reserved.</p>
     </footer>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+    <!-- slickの読み込み -->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
