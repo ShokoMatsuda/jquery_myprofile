@@ -31,4 +31,12 @@ $(function() {
             $('#back-btn').css('display', 'none');
          }
     });
+
+     // ページ内リンクがクリックされた時にスクロールをなめらかにする
+     $('a[href^="#"]').on('click', function(){
+        // href属性の値を取得する
+        const result = $('a').attr('href');
+        console.log(result);
+     });
+
 });
