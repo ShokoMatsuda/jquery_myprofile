@@ -18,4 +18,17 @@ $(function() {
             $(this).fadeTo('slow', 1.0);
         }
     );
+
+    // スクロール時のtopに戻るボタン
+    $(window).on('scroll', function(){
+        // スクロール量を取得する
+        const scrollValue = $(this).scrollTop();
+
+        // スクロール量が100px以上の時のボタンを表示する
+        if (scrollValue >= 100) {
+             $('#back-btn').css('display', 'inline');
+         } else {
+            $('#back-btn').css('display', 'none');
+         }
+    });
 });
