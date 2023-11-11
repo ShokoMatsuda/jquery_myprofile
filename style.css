@@ -180,7 +180,7 @@ footer p {
 /* スクロール時のフェードイン */
 /* スクロール前 */
 section {
-    /* opacity: 0; */
+    opacity: 0; 
     transition: 1s;
 } 
 

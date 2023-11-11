@@ -1,6 +1,6 @@
 $(function() {
     // カルーセル
-    $('.carousel').slick({
+    $('.slider').slick({
         autoplay: true,
         dots: true,
         infinite: true,
@@ -52,7 +52,7 @@ $(function() {
       });
 
     //   スクロールした時にフェードインさせる
-      $(window).on('scroll', function(){
+      $(window).scroll(function () {
           const scrollAmount = $(window).scrollTop();
           const windowHeight = $(window).height();
           $('section').each(function(){
