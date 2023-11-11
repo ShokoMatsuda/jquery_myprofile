@@ -34,9 +34,40 @@ $(function() {
 
      // ページ内リンクがクリックされた時にスクロールをなめらかにする
      $('a[href^="#"]').on('click', function(){
-        // href属性の値を取得する
-        const result = $('a').attr('href');
-        console.log(result);
-     });
 
+         const speed = 500;
+         const href = $(this).attr("href");
+         let target;
+         if (href == '#') {
+            target = $('html');
+         } else {
+            target = $(href);
+        }
+         const position = target.offset().top;
+         $("html, body").animate({'scrollTop':position}, speed, 'swing');
+        //   return false;
+         // href属性の値を取得する
+         //  const result = $('a').attr('href');
+         //  console.log(result);
+      });
+
+    //   スクロールした時にフェードインさせる
+      $(window).on('scroll', function(){
+          const scrollAmount = $(window).scrollTop();
+          const windowHeight = $(window).height();
+          $('section').each(function(){
+              const position = $(this).offset().top;
+              if (scrollAmount > position - windowHeight + 100){
+                  $(this).addClass('fade-in');
+              }
+         });
+      });
+
+    // モーダル
+      $('.works img').on('click', function(){
+          const imgSrc = $(this).attr('src');
+          $('.big-img').attr('src', imgSrc);
+          $('.modal').fadeIn();
+          return false
+      });
 });
